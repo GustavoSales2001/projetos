@@ -171,6 +171,26 @@ header h1{
 
 </div>
 
+  <script>
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add('show');
+    }
+  });
+});
+
+setTimeout(() => {
+  reveals.forEach(el => {
+    el.classList.add('show');
+  });
+}, 2000);
+</script>
+
 </body>
 </html>
+
 
